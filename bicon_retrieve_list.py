@@ -3,13 +3,13 @@ from selenium import webdriver
 
 import pandas as pd
 import os
-os.chdir('/Users/ksongsom/Library/CloudStorage/OneDrive-Personal/SideHustles/Agri_canberra/BICON_scripts/')
+os.chdir('Agri_canberra/BICON_scripts/')
 df = pd.read_csv('Export.csv')
 print(df.columns.tolist())
 
 df = df.rename(columns={' Case/Tariff Title': 'TariffTitle'})
 
-#df = pd.read_csv('/Users/ksongsom/Library/CloudStorage/OneDrive-Personal/SideHustles/Agri_canberra/BICON_scripts/Export.csv')
+#df = pd.read_csv('Agri_canberra/BICON_scripts/Export.csv')
 driver = webdriver.Chrome()
 for index, row in df.iterrows():
     #df['TariffTitle'][1]
